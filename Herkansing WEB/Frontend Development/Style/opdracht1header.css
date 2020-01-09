@@ -1,0 +1,262 @@
+
+/*draaien van de body door javascript, dat zet dit aan*/
+body.draaien {
+    transform: rotate(15deg);
+}
+/*zorgt ervoor dat de body 'smooth' beweegt bij het klikken op de titel*/
+body {
+    transition: .3s;
+}
+
+ h1:hover{
+        cursor: pointer;
+     transform: rotate(15deg);
+    }
+
+/*Begin Navigatie*/
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-family: roboto;
+    align-items: center;
+
+}
+
+li {
+    padding: 1rem;
+    color: #39285a;
+
+}
+
+li > a:hover {
+    transition: 0.3s ease;
+    color: #D86A8C;
+
+}
+li:nth-of-type(2):hover{
+    transform: rotate(15deg);
+
+}
+
+li > a > img {
+    max-height: 4em;
+}
+
+li > a {
+    text-decoration: none;
+    color: #39285a;
+}
+
+
+/*logo, zorgt ervoor dat logo links staat en about rechts*/
+
+li:nth-of-type(1) {
+    flex-grow: 1;
+}
+
+/*Einde Navigatie*/
+
+/*Begin Artikelen homepagina*/
+
+article {
+    background: #f7f7f7;
+    transition: .2s;
+}
+
+article:hover{
+    transform: scale(1.1);
+}
+/*
+article>h2{
+   opacity: 10%;
+}
+*/
+
+
+article > a > img {
+    width: 100%;
+}
+
+/*RESPONSIVE - telefoon/tablet formaat*/
+
+@media (min-width:20em) {
+    .artikelen {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+        font-family: roboto;
+        text-align: center;
+    }
+
+    /*RESPONSIVE - tablet/desktop formaat*/
+    @media (min-width:60em) {
+        .artikelen {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 1em;
+            font-family: roboto;
+            text-align: center;
+
+        }
+
+
+        article > h2 {
+            font-family: roboto;
+            font-size: 1em;
+            text-align: center;
+        }
+
+    }
+
+
+    h1 {
+        font-family: roboto;
+        text-align: center;
+        font-size: 20;
+        color: #D86A8C;
+    }
+
+
+    p {
+        font-family: roboto;
+        text-align: center;
+        font-size: 16;
+        color: #39285a;
+    }
+
+    /*Einde Artikelen homepagina*/
+    /*   begin formulier*/
+}
+
+div {
+    display: block
+}
+form {
+    display: inline-block;
+    flex-direction: column;
+    color: #39285a;
+    font-family: roboto;
+    width: 100%;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: left;
+
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+/*    max-width: 50%;*/
+
+}
+
+legend {
+    text-align: center;
+    font-family: roboto;
+    font-size: 1.5em;
+    color: #D86A8C;
+
+}
+
+button {
+    background-color: #D86A8C;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-size: 1em;
+    max-width: 40%;
+}
+
+input {
+    /*    border-color: #000;*/
+    border: 2px solid #D86A8C;
+    padding: .25em;
+    font-size: 1.25em;
+    margin-bottom: 1em;
+    width: 40%;
+    transition: .3s;
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:invalid {
+    border-color: #D86A8C;
+    /*   background: ;*/
+}
+
+input:focus {
+    transform: scale(1.01, 1.01);
+}
+
+input:invalid:focus {
+    outline: 4px solid #D86A8C;
+}
+
+input:valid:focus {
+    outline: 4px solid green;
+}
+
+input:disabled {
+    border-color: #eee;
+    background-color: #f9f9f9;
+}
+
+/*eind van formulier*/
+
+/*Begin detailpagina 2*/
+
+main > img {
+    max-width: 25em;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+main > p {
+    max-width: 25em;
+    text-align: left;
+    color: #39285a;
+    font-family: roboto;
+    margin: 1em;
+
+}
+
+
+div>a>img{
+    max-height: 4em;
+    max-width: 4em;
+    padding: 1rem;
+
+
+}
+
+div{
+    display: flex;
+    justify-content: space-around;
+
+}
+.pijldetail1{
+    opacity:0;
+}
+
+/*
+div>a:nth-of-type(1){
+
+flex-grow: 1;
+
+}
+*/
+
+/*Einde detailpagina 2*/
+
+/* Begin About pagina*/
