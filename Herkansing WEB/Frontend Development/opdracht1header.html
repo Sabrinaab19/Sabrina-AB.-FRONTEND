@@ -69,16 +69,22 @@
 
             <label for="E-mail">E-mail adress</label><input required type="email" placeholder="example@mail.com">
 
-            <label for="Checkbox">I feel great today!</label><input required type="checkbox">
+<!--            gevonden op: https://stackoverflow.com/questions/306252/how-to-align-checkboxes-and-their-labels-consistently-cross-browsers om de tekst naast de checkbox te krijgen-->
+              <label><input type="checkbox" /> I feel great today!</label>
+
+
 
 
         </fieldset>
+<!-- deze manier gevonden op : https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link om de knop naar de bedankpagina te verwijzen-->
+         <button formaction="bedanktpagina.html">Sign me up!</button>
 
-        <button>Sign me up!</button>
+
     </form>
 </div>
 
 <script src="script.js"></script>
+
 </body>
 
 

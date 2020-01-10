@@ -1,17 +1,19 @@
-
 /*draaien van de body door javascript, dat zet dit aan*/
+
 body.draaien {
     transform: rotate(15deg);
 }
+
 /*zorgt ervoor dat de body 'smooth' beweegt bij het klikken op de titel*/
+
 body {
     transition: .3s;
 }
 
- h1:hover{
-        cursor: pointer;
-     transform: rotate(15deg);
-    }
+h1:hover {
+    cursor: pointer;
+    transform: rotate(15deg);
+}
 
 /*Begin Navigatie*/
 
@@ -35,7 +37,8 @@ li > a:hover {
     color: #D86A8C;
 
 }
-li:nth-of-type(2):hover{
+
+li:nth-of-type(2):hover {
     transform: rotate(15deg);
 
 }
@@ -65,15 +68,15 @@ article {
     transition: .2s;
 }
 
-article:hover{
+article:hover {
     transform: scale(1.1);
 }
+
 /*
 article>h2{
    opacity: 10%;
 }
 */
-
 
 article > a > img {
     width: 100%;
@@ -133,14 +136,13 @@ article > a > img {
 div {
     display: block
 }
+
 form {
     display: inline-block;
     flex-direction: column;
     color: #39285a;
     font-family: roboto;
     width: 100%;
-    margin-left:auto;
-    margin-right: auto;
     text-align: left;
 
 }
@@ -150,8 +152,11 @@ fieldset {
     flex-direction: column;
     justify-content: center;
     padding: 1em;
-/*    max-width: 50%;*/
-
+    /*    max-width: 50%;*/
+    /*
+     position: absolute;
+    left: 20%;
+*/
 }
 
 legend {
@@ -165,10 +170,11 @@ legend {
 button {
     background-color: #D86A8C;
     color: white;
-    text-align: center;
     padding: 1em;
     font-size: 1em;
-    max-width: 40%;
+    width: 30%;
+    position: absolute;
+    left: 35%;
 }
 
 input {
@@ -177,16 +183,23 @@ input {
     padding: .25em;
     font-size: 1.25em;
     margin-bottom: 1em;
-    width: 40%;
+    width: 50%;
     transition: .3s;
 }
 
 input:valid {
     border-color: green;
+
+}
+
+label > input:valid {
+    max-width: 1em;
+
 }
 
 input:invalid {
     border-color: #D86A8C;
+
     /*   background: ;*/
 }
 
@@ -231,32 +244,90 @@ main > p {
 
 }
 
-
-div>a>img{
+nav > a > img {
     max-height: 4em;
     max-width: 4em;
     padding: 1rem;
-
-
+    flex-grow: 1em;
 }
 
-div{
-    display: flex;
-    justify-content: space-around;
+nav.volgende a {
+    position: absolute;
+    top: 50%;
+}
 
+nav a:nth-of-type(2) {
+    right: 2em;
 }
-.pijldetail1{
-    opacity:0;
+
+
+
+
+nav > a > img {
+    max-height: 4em;
+    max-width: 4em;
+    padding: 1rem;
 }
+
+
+
 
 /*
-div>a:nth-of-type(1){
-
-flex-grow: 1;
-
+.pijltjedetail1{
+opacity: 0%;
 }
-*/
+ */
 
 /*Einde detailpagina 2*/
 
-/* Begin About pagina*/
+
+        /* Begin About pagina*/
+        /*        Einde About pagina*/
+        /* Begin bedankt pagina*/
+        /*
+
+*/
+        /* gebruikte bron:https://www.youtube.com/watch?v=vJNVramny9k
+dasharray is voor de gaatjes in de letters tijdens de animatie*/
+        #thankstekst {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        #thankstekst path {
+            stroke-dasharray: 500px;
+            stroke-dashoffset: 500px;
+            animation: line-anim 5s ease forwards;
+        }
+
+
+        @keyframes line-anim {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+@media (min-width:20em) {
+    #thankstekst {
+        max-width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+    }
+
+    /*RESPONSIVE - tablet/desktop formaat*/
+    @media (min-width:60em) {
+          #thankstekst {
+              max-width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        /*        Einde bedankt pagina*/
